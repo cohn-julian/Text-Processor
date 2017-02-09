@@ -1,0 +1,68 @@
+<html>
+    <head>
+    <title>Text Processor</title>
+ <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+    <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <div class="container">
+            <br>
+            <div class="row">
+                <div class="col s5"></div>
+                <a href="/" class="btn col s2">Home</a>
+            </div>
+
+
+            <!-- stats! frequencies, [next], [next], etc -->
+          <div  class="card light-green darken-1">
+            <div class="card-content">
+                <span class="card-title ">
+                    WORD FREQUENCIES
+                </span>
+                {% for word, num in f_dist %}
+                    <p class="">{{word}} : {{num}}</p>
+                {% endfor %}
+
+            </div>
+          </div>
+
+          <div  class="card light-green ">
+            <div class="card-content">
+                <span class="card-title ">
+                    COUNTS
+                </span>
+                    <p class="">Word Count : {{words}}</p>
+                    <p class="">Charactar Count : {{chars}}</p>
+
+            </div>
+          </div>
+
+          <div  class="card light-green lighten-1">
+            <div class="card-content">
+                <span class="card-title ">
+                    SUMMARY
+                </span>
+                <p> {{summary}} </p>
+            </div>
+          </div>
+
+          <div  class="card light-green lighten-2">
+            <div class="card-content">
+                <span class="card-title ">
+                    RANDOMY GENERATED TEXT BASED ON INPUT
+                </span>
+                <p>{{markov_chain}}</p>
+            </div>
+
+
+    </body>
+</html>
